@@ -39,14 +39,14 @@ Ran all test suites.
 
 The game consists of 6 dice. On each roll, you got a score based on the following rules:
 
-| Rule                             | Score                | Example                                                                             |
-| -------------------------------- | -------------------- | ----------------------------------------------------------------------------------- |
-| All dice are different           | 100                  | `[1, 2, 3, 4, 5, 6]`                                                                |
-| For every group of 2 equal dices | Group dice value     | `[2, 2, 3, 4, 5, 6]` -> `2`, but `[1, 1, 2, 2, 3, 3]` -> `6` points (1 + 2 + 3)     |
-| For every group of 3 equal dices | 3 * Group dice value | `[2, 2, 2, 4, 5, 6]` -> `6`, but `[3, 3, 3, 4, 4, 4]` -> `9` points (3 * 3 + 3 * 4) |
-| 4 equal dices                    | 10 * Dice value      | `[2, 2, 2, 2, 5, 6]` -> `20` points (10 * 2)                                        |
-| 5 equal dices                    | 0                    | `[1, 1, 1, 1, 1, 6]`                                                                |
-| All equal dices                  | 100 * Dice value     | `[1, 1, 1, 1, 1, 1]` -> `100` points, and `[6, 6, 6, 6, 6, 6]` -> `600` points      |
+| Rule                             | Score                | Example                                                                              |
+| -------------------------------- | -------------------- | ------------------------------------------------------------------------------------ |
+| All dice are different           | 100                  | `[1, 2, 3, 4, 5, 6]`                                                                 |
+| For every group of 2 equal dices | Group dice value     | `[2, 2, 3, 4, 5, 6]` -> `2`, but `[1, 1, 2, 2, 3, 3]` -> `6` points (1 + 2 + 3)      |
+| For every group of 3 equal dices | 3 * Group dice value | `[2, 2, 2, 4, 5, 6]` -> `6`, but `[3, 3, 3, 4, 4, 4]` -> `21` points (3 * 3 + 3 * 4) |
+| 4 equal dices                    | 10 * Dice value      | `[2, 2, 2, 2, 5, 6]` -> `20` points (10 * 2)                                         |
+| 5 equal dices                    | 0                    | `[1, 1, 1, 1, 1, 6]`                                                                 |
+| All equal dices                  | 100 * Dice value     | `[1, 1, 1, 1, 1, 1]` -> `100` points, and `[6, 6, 6, 6, 6, 6]` -> `600` points       |
 
 - Rules are accumulative, so a roll like `[3, 3, 3, 3, 5, 5]` scores `35` points because there's a group of four 3's and a pair of 5's (10 * 3 + 5)
 
