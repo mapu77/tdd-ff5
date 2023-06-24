@@ -7,7 +7,7 @@ The purpose of this [kata](https://es.wikipedia.org/wiki/Kata#Discusiones_sobre_
 1. Clone the repository in your local machine
 `git clone git@github.com:mapu77/tdd-ff5.git`
 
-2. Install [Node 18](https://nodejs.org/en/download)
+2. Install [Node >= 14(https://nodejs.org/en/download)
 
 3. Navigate to the root of the project
 `cd tdd-ff5`
