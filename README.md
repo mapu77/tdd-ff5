@@ -39,13 +39,16 @@ Ran all test suites.
 
 The game consists of 6 dice. On each roll, you got a score based on the following rules:
 
-- Rules are accumulative.
-- All dice are diferent, you got 100 points. (i.e. `[1, 2, 3, 4, 5, 6]` -> `100` points)
-- For every pair of dices with the same number, you got the amount points of the repeated number. (i.e. `[2, 2, 3, 4, 5, 6]` -> `2` points, and `[1, 1, 3, 4, 5, 6]` -> `1` points, but `[1, 1, 2, 2, 3, 3]` -> `6` points (1 + 2 + 3))
-- For every three group of dices with the same number, you got 3 times the amount points of the repeated number. (i.e. `[2, 2, 2, 4, 5, 6]` -> `6` points (2 * 3), and `[3, 3, 3, 4, 5, 6]` -> `9` points (3 * 3), but `[3, 3, 3, 4, 4, 4]` -> `9` points (3 * 3 + 3 * 4))
-- By rolling 4 equal dices, you got 10 times the amount points of the repeated number. (i.e. `[2, 2, 2, 2, 5, 6]` -> `6` points (2 * 3), but `[3, 3, 3, 3, 5, 5]` -> `35` points (10 * 3 + 5))
-- By rolling 5 equal dices, you got 0 points. Why not? 🤷🏼‍♂️ (i.e. `[1, 1, 1, 1, 1, 6]` -> `0` points)
-- By rolling a all equal dices, you 100 times the amount of the repeated number. (i.e. `[1, 1, 1, 1, 1, 1]` -> `100` points, and `[6, 6, 6, 6, 6, 6]` -> `600` points)
+| Rule                             | Score                | Example                                                                             |
+| -------------------------------- | -------------------- | ----------------------------------------------------------------------------------- |
+| All dice are different           | 100                  | `[1, 2, 3, 4, 5, 6]`                                                                |
+| For every group of 2 equal dices | Group dice value     | `[2, 2, 3, 4, 5, 6]` -> `2`, but `[1, 1, 2, 2, 3, 3]` -> `6` points (1 + 2 + 3)     |
+| For every group of 3 equal dices | 3 * Group dice value | `[2, 2, 2, 4, 5, 6]` -> `6`, but `[3, 3, 3, 4, 4, 4]` -> `9` points (3 * 3 + 3 * 4) |
+| 4 equal dices                    | 10 * Dice value      | `[2, 2, 2, 2, 5, 6]` -> `20` points (10 * 2)                                        |
+| 5 equal dices                    | 0                    | `[1, 1, 1, 1, 1, 6]`                                                                |
+| All equal dices                  | 100 * Dice value     | `[1, 1, 1, 1, 1, 1]` -> `100` points, and `[6, 6, 6, 6, 6, 6]` -> `600` points      |
+
+- Rules are accumulative, so a roll like `[3, 3, 3, 3, 5, 5]` scores `35` points because there's a group of four 3's and a pair of 5's (10 * 3 + 5)
 
 ### Want more rules?
 Just be creative ;)
